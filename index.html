@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src=./src/logic/index.js defer></script>
+    <link rel="stylesheet" href="./src/index.css">
+    <title>App del tiempo</title>
+  </head>
+  <body>
+    <main class="flex flex-col items-center">
+      <div class="icon-container">
+        <img class="sun" src="./src/images/sun.png" alt="">
+        <img class="moon" src="./src/images/moon.png" alt="">
+      </div>
+      <h1 id="city" class="text-red-600">El tiempo en Mérida</h1>
+      <h2 id="current-temperature">16º</h2>
+      <div id="weather-icon"></div>
+      <div id="hours-temperatures">
+        <div class="row-time"></div>
+        <div class="row-time"></div>
+        <div class="row-time"></div>
+        <div class="row-time"></div>
+        <div class="row-time"></div>
+        <div class="row-time"></div>
+        <div class="row-icon"></div>
+        <div class="row-icon"></div>
+        <div class="row-icon"></div>
+        <div class="row-icon"></div>
+        <div class="row-icon"></div>
+        <div class="row-icon"></div>
+        <div class="row-temperature"></div>
+        <div class="row-temperature"></div>
+        <div class="row-temperature"></div>
+        <div class="row-temperature"></div>
+        <div class="row-temperature"></div>
+        <div class="row-temperature"></div>
+      </div>
+      <p id="weather-phrase"></p>
+    </main>
+  </body>
+</html>
