@@ -8,36 +8,32 @@
     <link rel="stylesheet" href="./src/index.css">
     <title>App del tiempo</title>
   </head>
-  <body>
-    <main class="flex flex-col items-center">
-      <div class="icon-container">
-        <img class="sun" src="./src/images/sun.png" alt="">
-        <img class="moon" src="./src/images/moon.png" alt="">
-      </div>
-      <h1 id="city" class="text-red-600">El tiempo en Mérida</h1>
-      <h2 id="current-temperature">16º</h2>
+  <body class="bg-gradient-to-r from-cyan-500 to-blue-500">
+    <main class="flex flex-col items-center gap-4 mt-12 ">
+      <h1 id="city" class="text-3xl text-white text- [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]">Mérida</h1>
+      <h2 id="current-temperature" class="text-5xl text-white [text-shadow:_1px_1px_2px_rgb(0_0_0_/_0.8)]">16º</h2>
       <div id="weather-icon"></div>
-      <div id="hours-temperatures">
-        <div class="row-time"></div>
-        <div class="row-time"></div>
-        <div class="row-time"></div>
-        <div class="row-time"></div>
-        <div class="row-time"></div>
-        <div class="row-time"></div>
-        <div class="row-icon"></div>
-        <div class="row-icon"></div>
-        <div class="row-icon"></div>
-        <div class="row-icon"></div>
-        <div class="row-icon"></div>
-        <div class="row-icon"></div>
-        <div class="row-temperature"></div>
-        <div class="row-temperature"></div>
-        <div class="row-temperature"></div>
-        <div class="row-temperature"></div>
-        <div class="row-temperature"></div>
-        <div class="row-temperature"></div>
+      <div id="hours-temperatures" class="text-white grid grid-cols-6 gap-2 justify-items-center bg-opacity-80 bg-blue-300 p-2 rounded">
+        <div class="row-time [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
+        <div class="row-time [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
+        <div class="row-time [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
+        <div class="row-time [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
+        <div class="row-time [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
+        <div class="row-time [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
+        <div class="row-icon w-8 h-8"></div>
+        <div class="row-icon w-8 h-8"></div>
+        <div class="row-icon w-8 h-8"></div>
+        <div class="row-icon w-8 h-8"></div>
+        <div class="row-icon w-8 h-8"></div>
+        <div class="row-icon w-8 h-8"></div>
+        <div class="row-temperature [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
+        <div class="row-temperature [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
+        <div class="row-temperature [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
+        <div class="row-temperature [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
+        <div class="row-temperature [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
+        <div class="row-temperature [text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)]"></div>
       </div>
-      <p id="weather-phrase"></p>
+      <p id="weather-phrase" class="[text-shadow:_0.5px_0.5px_1px_rgb(0_0_0_/_0.8)] bg-opacity-80 bg-blue-300 backdrop-blur-sm p-4 rounded text-white"></p>
     </main>
   </body>
 </html>

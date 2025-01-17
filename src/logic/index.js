@@ -3,8 +3,7 @@ import * as c from "../constants.js";
 const currentTemperatureElement = document.getElementById(
   "current-temperature"
 );
-const iconSunImage = document.querySelector(".sun");
-const iconMoonImage = document.querySelector(".moon");
+
 const rowTime = document.querySelectorAll(".row-time");
 const rowIcon = document.querySelectorAll(".row-icon");
 const rowTemperature = document.querySelectorAll(".row-temperature");
@@ -20,12 +19,6 @@ async function request(url) {
     let currentTemperature = data.current.temperature_2m;
     currentTemperatureElement.innerText = currentTemperature;
 
-    if (data.current.is_day === 0) {
-      iconMoonImage.classList.add("set-animation-right");
-    } else if (data.current.is_day === 1) {
-      iconSunImage.classList.add("set-animation-left");
-    }
-
     let currentTime = data.current.time;
     currentTime = data.current.time.split(":")[0] + ":00".trim();
 
@@ -39,8 +32,25 @@ async function request(url) {
       <span>Ahora</span>
     `;
 
+    let urlImage;
+
+    switch (hourlyWeatherCode[index]) {
+      case 0:
+        urlImage = "./sun.png"
+        break;
+      case 1, 2, 3:
+        urlImage = "./cloudy.png"
+        break;
+      case 61, 63, 65:
+        urlImage = "./rainy.png"
+        break;
+      default:
+        urlImage = "./sun.png"
+        break;
+    }
+
     rowIcon[0].innerHTML = `
-      <span>${hourlyWeatherCode[index]}</span>
+      <img src="${urlImage}"></img>
     `;
 
     let temperature = Math.round(currentTemperature);
@@ -54,10 +64,27 @@ async function request(url) {
       let formatHourlyTime = hourlyTime[i].split("T")[1];
       rowTime[counter].innerHTML = `
       <span>${formatHourlyTime}</span>
-    `;
+      `;
+
+      let urlImage;
+
+      switch (hourlyWeatherCode[i]) {
+        case 0:
+          urlImage = "./sun.png"
+          break;
+        case 1, 2, 3:
+          urlImage = "./cloudy.png"
+          break;
+        case 61, 63, 65:
+          urlImage = "./rainy.png"
+          break;
+        default:
+          urlImage = "./sun.png"
+          break;
+      }
 
       rowIcon[counter].innerHTML = `
-        <span>${hourlyWeatherCode[i]}</span>
+        <img src="${urlImage}"></img>
       `;
 
       rowTemperature[counter].innerHTML = `
