@@ -38,10 +38,14 @@ async function request(url) {
       case 0:
         urlImage = "./sun.png"
         break;
-      case 1, 2, 3:
+      case 1:
+      case 2:
+      case 3:
         urlImage = "./cloudy.png"
         break;
-      case 61, 63, 65:
+      case 61:
+      case 63:
+      case 65:
         urlImage = "./rainy.png"
         break;
       default:
@@ -68,14 +72,18 @@ async function request(url) {
 
       let urlImage;
 
-      switch (hourlyWeatherCode[i]) {
+      switch (hourlyWeatherCode[index]) {
         case 0:
           urlImage = "./sun.png"
           break;
-        case 1, 2, 3:
+        case 1:
+        case 2:
+        case 3:
           urlImage = "./cloudy.png"
           break;
-        case 61, 63, 65:
+        case 61:
+        case 63:
+        case 65:
           urlImage = "./rainy.png"
           break;
         default:
